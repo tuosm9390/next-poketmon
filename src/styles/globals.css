@@ -2,32 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #FCEEC8;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.container {
+  margin: auto;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .poke-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 30%;
+  padding-top: 30px;
+  /* min-height: 100vh; */
+  padding-bottom: 5px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 15px;
+  background-color: lightyellow;
+  height: 200px;
+}
+
+.search__container {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid lightyellow;
+}
+
+.msg__error {
+  color: rgb(209, 102, 102);
+}
+
+.poke__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer_ref {
+  /* position: absolute;
+  bottom: 10px; */
+}
+
+.evolution-box {
+  display: flex;
+  gap: 20px;
 }
